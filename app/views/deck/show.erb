@@ -1,3 +1,5 @@
+<p>Pick a deck to play!</p>
+
 <% @decks.each do |deck| %>
-<a href='/decks/<%="#{deck.id}"%>'><%= deck.name %></a>
+<a href='/decks/<%="#{deck.id}"%>/cards/<%="#{deck.cards.sample.id}"%>'><%= deck.name %></a>
 <% end %>
