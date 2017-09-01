@@ -17,3 +17,8 @@ post '/login' do
     erb :"sessions/index"
   end
 end
+
+get '/logout' do
+  session.clear
+  redirect "/login"
+end
