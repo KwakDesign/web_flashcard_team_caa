@@ -1,8 +1,8 @@
-get '/user/new ' do
-  erb :signup
+get '/register' do
+  erb :"register/index"
 end
 
-post '/user' do
+post '/register' do
   user = User.new(params[:user])
   if user.save
     session[:user_id] = @user.id
