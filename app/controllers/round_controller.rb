@@ -11,5 +11,12 @@ end
 
 get '/decks/:id' do
   @deck = Deck.find_by(id: params[:id])
+  @cards = @deck.cards
   erb :'deck/game'
 end
+
+# post '/decks/:id' do
+#   puts params
+#   @guess = Guess.new()
+#   @guess.correct = params[:guess][:user_guess].correct?()
+# end
