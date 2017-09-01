@@ -1,0 +1,12 @@
+<h1>Welcome to Flashcards!</h1>
+
+<p>You are playing the <%=@deck.name%> deck!</p>
+
+<%= @card.question %>
+<br><br>
+  <form method="post" action='/decks/<%=@deck.id%>/cards/<%=@card.id%>'>
+    <input type="text" name="guess[:user_guess]">
+    <input type="submit" value="Answer">
+  </form>
+
+
